@@ -8,3 +8,4 @@ import random
 print ('Answer: ' + str(random.randint(1,10))) 
 y = random.randint(1,10)
 print(bool(guess == y))
+print("replay?")
