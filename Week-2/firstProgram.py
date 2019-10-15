@@ -1,0 +1,10 @@
+print("what is your name?")
+name = input("Enter name:")
+print('hi ' + name)
+print ("Guess a number between 1 and 10")
+guess = input("Enter number:")
+guess = int(guess)
+import random
+print ('Answer: ' + str(random.randint(1,10))) 
+y = random.randint(1,10)
+print(bool(guess == y))
