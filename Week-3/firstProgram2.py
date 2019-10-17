@@ -14,8 +14,8 @@ else:
     guess = int(guess)
     if y == guess:
         print("Hurrah!! the answer was " + str(y))
-    else:
-        print("One last time")
+    else: 
+        print("Nope, one last time")
         guess = input("Enter number:")
         guess = int(guess)
         if y == guess:
