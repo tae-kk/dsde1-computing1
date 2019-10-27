@@ -9,15 +9,14 @@ with functions.
 # write a function that adds 1
 # to the input and prints the result
 def inc(a):
-    print(int(a) + 1)
-inc(input("enter number: "))
+    print(a + 1)
+
 
 
 # write a function that adds 1
 # to the input and returns the result
 def inc_return(a):
-    return int(a) + 1
-inc(input("enter number: "))  # hint this is incomplete
+    return a + 1  # hint this is incomplete
 
 
 # write a function that adds
@@ -27,11 +26,6 @@ inc(input("enter number: "))  # hint this is incomplete
 def sum(a, b):
     sum = a + b
     return sum
-x = int(input("nom 1: "))
-y = int(input("nom 2: "))
-nom = sum(x, y)
-
-print(nom)
 
 
 
@@ -42,10 +36,6 @@ print(nom)
 def sum_inc(a, b):
     sum_inc = a + b + 1
     return sum_inc
-x = int(input("nom 1 : "))
-y = int(input("nom 2 : "))
-nom = sum_inc(x, y)
-print(nom)
 
 
 # write a function that returns a 
@@ -56,10 +46,6 @@ def is_even(a):
        return True
     else:
         return False
-b = int(input("enter number: "))
-ans = is_even(b)
-print(ans)
-
 
 # create for loop that takes a string
 # and an integer and returns a new string 
@@ -72,8 +58,4 @@ def string_repeat(phrase, repeat):
     # hint: you can add strings together 
     # in order to concatenate them
     return string_repeat
-x = input("gimme a phrase: ")
-y = int(input("repeat: "))
-ans = string_repeat(x, y)
-print(ans)
 
