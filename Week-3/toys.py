@@ -53,9 +53,9 @@ def is_even(a):
 # integer
 # e.g. string_repeat('ho', 3) returns
 # 'hohoho'
+# hint: you can add strings together 
+# in order to concatenate them
 def string_repeat(phrase, repeat):
-    string_repeat = phrase * int(repeat)
-    # hint: you can add strings together 
-    # in order to concatenate them
+    string_repeat=phrase*repeat
     return string_repeat
 
