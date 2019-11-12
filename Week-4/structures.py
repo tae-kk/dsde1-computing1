@@ -18,11 +18,14 @@ def first_and_last(the_list):
 # If "end" is greater then "beginning" or any og the indices is out of the
 # list, raise a "ValueError" exception. 
 def part_reverse(the_list, beginning, end):
-    gobble = the_list[beginning:end] 
-    if end > beginning:
-        raise ValueError("error")
-    return gobble.reverse()
-
+    try:
+        gobble = the_list[beginning:end] 
+        gobble.reverse()
+        return gobble
+    except:
+        if end > beginning:
+            raise ValueError("error")
+    
 
 # write a function that at the "index" of "the_list" inserts three times the
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
@@ -40,22 +43,23 @@ def repeat_at_index(the_list, index):
 # write a function that checks whether the word is a palindrome, i.e. it reads
 # the same forward and backwards
 def palindrome_word(word):
-    if word == word[::1]:
-        return True
-    else:
-        return False
-    
+    word1 = word.lower()
+    word2 = word1[::-1]
+    return word1 == word2
 
+     
 
 # write a function that checks whether the sentence is a palindrome, i.e. it
 # read the same forward and backward. Ignore all spaces and other characters
 # like fullstops, commas, etc. Also do not consider whether the letter is
 # capital or not. 
 def palindrome_sentence(sentence):
-    if sentence == sentence[::1]:
-        return True
-    else:
-        return False
+    sentence1 = sentence.lower()
+    sentence1 = sentence1.replace(" ", "")
+    rev = sentence[::-1]
+    low = rev.lower()
+    no_space = low.replace(" ", "")
+    return sentence1 == no_space
 
 # write a function that concatenates two sentences. First the function checks
 # whether the sentence meets the following criteria: it starts with a capital

@@ -38,15 +38,24 @@ def welcome_message(user_name = None, place = None):
 
 def list_average(list_number, avg_type = None):
     n = len(list_number)
-    if avg_type == "mode":
-        for i in list_number:
-            list_number.count(i)
-
     if avg_type == "mean":
-        sum(list_number)/len(list_number)
-    if avg_type == "median":        
-       order = list_number.sort
-       return list_number.sort[n/2]
-    return sum(list_number)/n
-  
-
+        sumnums = sum(list_number)
+        return sumnums/n
+    if avg_type == "median":
+        list_number.sort()
+        if list_number == []:
+            return None
+        elif n % 2 == 0:
+            med1 = list_number[int(len(list_number)/2)]
+            med2 = list_number[int((len(list_number)/2)-1)]
+            med = (med1 + med2)/2
+            return med
+        else:
+            return list_number[int((len(list_number)-1)/2)]
+    if list_number == []:
+        return 0
+    if avg_type == None:
+        sumnumss = sum(list_number)
+        return sumnumss/n
+    if avg_type == "mode" and list_number == []:
+        return []
